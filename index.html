@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Piece</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏴‍☠️</text></svg>" type="image/svg+xml">
+</head>
+<body style="color: #f0f0f0; line-height: 1.6; margin: 0; padding: 0; padding-top: 70px; position: relative; z-index: 1;">
+    <!-- Vídeo de fundo em 4K -->
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;">
+        <video autoplay muted loop style="position: absolute; min-width: 100%; min-height: 100%; width: auto; height: auto; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <source src="https://drive.google.com/file/d/13aCO0A-9RMwlpDSINP3VLIKv2pZfGMhP/view?usp=drive_link" type="video/mp4">
+        </video>
+        <!-- Overlay para melhorar a legibilidade do conteúdo -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75);"></div>
+    </div>
+
+    <!-- Elementos decorativos de fundo -->
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;">
+        <!-- Elemento decorativo superior direito (Jolly Roger estilizado) -->
+        <div style="position: absolute; top: 100px; right: 30px; width: 200px; height: 200px; opacity: 0.15;">
+            <div style="width: 100%; height: 100%; border-radius: 50%; border: 3px solid #FFEB3B; position: relative;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 80px;">☠️</div>
+            </div>
+        </div>
+        
+        <!-- Elemento decorativo inferior esquerdo (âncora estilizada) -->
+        <div style="position: absolute; bottom: 50px; left: 30px; width: 150px; height: 150px; opacity: 0.15;">
+            <div style="width: 100%; height: 100%; position: relative;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 80px;">⚓</div>
+            </div>
+        </div>
+        
+        <!-- Linhas onduladas representando o oceano -->
+        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100px; opacity: 0.1;">
+            <svg width="100%" height="100%" viewBox="0 0 1200 100" preserveAspectRatio="none">
+                <path d="M0,50 C150,100 350,0 500,50 C650,100 850,0 1000,50 C1150,100 1350,0 1500,50 V100 H0 Z" fill="#0277BD"></path>
+                <path d="M0,60 C150,110 350,10 500,60 C650,110 850,10 1000,60 C1150,110 1350,10 1500,60 V100 H0 Z" fill="#01579B" opacity="0.7"></path>
+                <path d="M0,70 C150,120 350,20 500,70 C650,120 850,20 1000,70 C1150,120 1350,20 1500,70 V100 H0 Z" fill="#0277BD" opacity="0.5"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Cabeçalho com menus -->
+    <header id="topo" style="display: flex; align-items: center; justify-content: space-between; background-color: #D32F2F; padding: 10px 20px; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(211, 47, 47, 0.7);">
+        <div style="display: flex; align-items: center;">
+            <img src="https://frasesqueinspiram.com/artigos/imagens/one-piece.webp" alt="Logo One Piece" style="height: 50px; margin-right: 15px;">
+            <h1 style="font-size: 1.5rem; margin: 0; color: #ffffff; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">One Piece</h1>
+        </div>
+        <nav style="display: flex; flex-wrap: wrap; justify-content: flex-end;">
+            <a href="#home" style="color: #ffffff; text-decoration: none; margin: 5px 15px; font-weight: bold; transition: all 0.3s; padding: 5px 10px; border-radius: 4px;">Home</a>
+            <a href="#curiosidades" style="color: #ffffff; text-decoration: none; margin: 5px 15px; font-weight: bold; transition: all 0.3s; padding: 5px 10px; border-radius: 4px;">Curiosidades</a>
+            <a href="#imagens" style="color: #ffffff; text-decoration: none; margin: 5px 15px; font-weight: bold; transition: all 0.3s; padding: 5px 10px; border-radius: 4px;">Imagens</a>
+            <a href="#mundo" style="color: #ffffff; text-decoration: none; margin: 5px 15px; font-weight: bold; transition: all 0.3s; padding: 5px 10px; border-radius: 4px;">Mundo</a>
+            <a href="#tripulacao" style="color: #ffffff; text-decoration: none; margin: 5px 15px; font-weight: bold; transition: all 0.3s; padding: 5px 10px; border-radius: 4px;">Tripulação</a>
+        </nav>
+    </header>
+
+    <div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <!-- Seção Home -->
+        <section id="home" style="background-color: rgba(2, 119, 189, 0.7); padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 3px 20px rgba(2, 119, 189, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); position: relative; overflow: hidden;">
+            <!-- Elemento decorativo dentro da seção -->
+            <div style="position: absolute; top: -30px; right: -30px; width: 150px; height: 150px; opacity: 0.1; transform: rotate(15deg);">
+                <div style="font-size: 120px;">🏴‍☠️</div>
+            </div>
+            
+            <div style="text-align: center; padding: 40px 0; background: linear-gradient(135deg, #D32F2F 0%, #0277BD 100%); margin-bottom: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); position: relative; overflow: hidden;">
+                <!-- Elemento decorativo dentro do banner -->
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 30% 50%, rgba(255, 235, 59, 0.1) 0%, rgba(255, 235, 59, 0) 60%);"></div>
+                
+                <h1 style="font-size: 3.5rem; margin-bottom: 10px; color: #ffffff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); position: relative;">ONE PIECE</h1>
+                <p style="font-size: 1.2rem; color: #FFEB3B; font-style: italic; margin-bottom: 15px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); position: relative;">A Grande Era dos Piratas</p>
+            </div>
+            
+            <img src="https://frasesqueinspiram.com/artigos/imagens/one-piece.webp" alt="One Piece Imagem Principal" style="width: 100%; max-width: 800px; height: auto; margin: 0 auto 30px; display: block; border-radius: 10px; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7); border: 2px solid rgba(255, 235, 59, 0.3);">
+            
+            <h2 style="color: #FFEB3B; margin-bottom: 15px; border-bottom: 2px solid #FFEB3B; padding-bottom: 10px; font-size: 2rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);">Sobre o Anime</h2>
+            <p style="margin-bottom: 15px; font-size: 1.1rem; line-height: 1.7; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">One Piece é uma série de anime e mangá criada por Eiichiro Oda. A história segue Monkey D. Luffy, um jovem cujo corpo ganhou as propriedades de borracha após comer uma Fruta do Diabo. Com sua tripulação, os Piratas do Chapéu de Palha, Luffy explora a Grand Line em busca do tesouro mais cobiçado do mundo, o "One Piece", a fim de se tornar o próximo Rei dos Piratas.</p>
+            <p style="margin-bottom: 15px; font-size: 1.1rem; line-height: 1.7; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">Iniciado em 1997 como mangá e em 1999 como anime, One Piece se tornou um fenômeno cultural global, sendo o mangá mais vendido da história e um dos animes mais populares de todos os tempos, com mais de 1000 episódios e contando.</p>
+            
+            <div style="background-color: rgba(0, 0, 0, 0.4); border-radius: 8px; padding: 20px; margin-top: 20px; border-left: 4px solid #FFEB3B;">
+                <h3 style="color: #FFEB3B; margin-bottom: 10px; font-size: 1.3rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">A Jornada de Luffy</h3>
+                <p style="margin-bottom: 0; font-size: 1.1rem; line-height: 1.7; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">A história começa quando Luffy parte de sua vila natal em busca do One Piece, inspirado por seu ídolo, o pirata Shanks, o Ruivo. Ao longo de sua jornada, ele forma sua tripulação, os Piratas do Chapéu de Palha, e enfrenta inimigos poderosos, incluindo outros piratas, a Marinha e o Governo Mundial, enquanto explora um mundo vasto e cheio de mistérios.</p>
+            </div>
+        </section>
+        
+        <!-- Seção Curiosidades -->
+        <section id="curiosidades" style="background-color: rgba(2, 119, 189, 0.7); padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 3px 20px rgba(2, 119, 189, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); position: relative; overflow: hidden;">
+            <!-- Elemento decorativo dentro da seção -->
+            <div style="position: absolute; bottom: -20px; left: -20px; width: 120px; height: 120px; opacity: 0.1; transform: rotate(-15deg);">
+                <div style="font-size: 100px;">⚓</div>
+            </div>
+            
+            <h2 style="color: #FFEB3B; margin-bottom: 15px; border-bottom: 2px solid #FFEB3B; padding-bottom: 10px; font-size: 2rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);">Curiosidades</h2>
+            
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="background-color: rgba(0, 0, 0, 0.6); padding: 15px; margin-bottom: 15px; border-radius: 8px; border-left: 4px solid #FFEB3B; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); transition: transform 0.3s;" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <h3 style="color: #FFEB3B; font-size: 1.3rem; margin-bottom: 10px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Recorde de Publicação</h3>
+                    <p style="margin-bottom: 5px; font-size: 1.1rem; line-height: 1.7; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">One Piece é o mangá mais vendido da história, com mais de 490 milhões de cópias em circulação em todo o mundo, superando outros títulos famosos como Dragon Ball e Naruto.</p>
+                </li>
+                <li style="background-color: rgba(0, 0, 0, 0.6); padding: 15px; margin-bottom: 15px; border-radius: 8px; border-left: 4px solid #FFEB3B; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); transition: transform 0.3s;" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <h3 style="color: #FFEB3B; font-size: 1.3rem; margin-bottom: 10px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Inspiração para Luffy</h3>
+                    <p style="margin-bottom: 5px; font-size: 1.1rem; line-height: 1.7; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">Eiichiro Oda revelou que se inspirou no personagem Son Goku de Dragon Ball para criar Luffy, e que o filme "As Aventuras do Pirata do Barba Branca" também foi uma grande influência para a criação de One Piece.</p>
+                </li>
+                <li style="background-color: rgba(0, 0, 0, 0.6); padding: 15px; margin-bottom: 15px; border-radius: 8px; border-left: 4px solid #FFEB3B; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); transition: transform 0.3s;" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <h3 style="color: #FFEB3B; font-size: 1.3rem; margin-bottom: 10px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Rotina de Trabalho</h3>
+                    <p style="margin-bottom: 5px; font-size: 1.1rem; line-height: 1.7; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">Oda é conhecido por sua ética de trabalho intensa, dormindo apenas 3-4 horas por dia. Ele trabalha das 10h às 5h da manhã, com apenas algumas pausas curtas, para manter o ritmo semanal de publicação do mangá desde 1997.</p>
+                </li>
+                <li style="background-color: rgba(0, 0, 0, 0.6); padding: 15px; margin-bottom: 15px; border-radius: 8px; border-left: 4px solid #FFEB3B; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); transition: transform 0.3s;" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <h3 style="color: #FFEB3B; font-size: 1.3rem; margin-bottom: 10px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Planejamento da História</h3>
+                    <p style="margin-bottom: 5px; font-size: 1.1rem; line-height: 1.7; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">Oda já revelou que sabe exatamente como One Piece terminará. Ele planejou o final desde o início e, apesar da série ter se estendido mais do que o previsto inicialmente, o desfecho permanece o mesmo.</p>
+                </li>
+                <li style="background-color: rgba(0, 0, 0, 0.6); padding: 15px; margin-bottom: 15px; border-radius: 8px; border-left: 4px solid #FFEB3B; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); transition: transform 0.3s;" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <h3 style="color: #FFEB3B; font-size: 1.3rem; margin-bottom: 10px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Guinness World Records</h3>
+                    <p style="margin-bottom: 5px; font-size: 1.1rem; line-height: 1.7; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">One Piece detém o recorde do Guinness de "maior número de cópias publicadas para a mesma série de quadrinhos por um único autor", além de ser o anime com mais episódios produzidos para uma única história.</p>
+                </li>
+            </ul>
+        </section>
+        
+        <!-- Seção Imagens -->
+        <section id="imagens" style="background-color: rgba(2, 119, 189, 0.7); padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 3px 20px rgba(2, 119, 189, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); position: relative; overflow: hidden;">
+            <!-- Elemento decorativo dentro da seção -->
+            <div style="position: absolute; top: 20px; right: 20px; width: 100px; height: 100px; opacity: 0.1; transform: rotate(25deg);">
+                <div style="font-size: 80px;">🗺️</div>
+            </div>
+            
+            <h2 style="color: #FFEB3B; margin-bottom: 15px; border-bottom: 2px solid #FFEB3B; padding-bottom: 10px; font-size: 2rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);">Galeria de Imagens</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+                <div style="height: 180px; background-color: rgba(0, 0, 0, 0.6); border-radius: 8px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 5px 20px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <img src="https://sm.ign.com/t/ign_br/tv/o/one-piece-/one-piece-2_1xby.1200.jpg" alt="Tripulação do Chapéu de Palha" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 180px; background-color: rgba(0, 0, 0, 0.6); border-radius: 8px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 5px 20px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbQGSpRtFRp7uSKY6OvqPF499jEao-61KNmA&s" alt="Thousand Sunny" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 180px; background-color: rgba(0, 0, 0, 0.6); border-radius: 8px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 5px 20px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr3OxbzwnBcQC7E8i1lATmd0RYoaeIHXDaOA&s" alt="Luffy Gear 5" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 180px; background-color: rgba(0, 0, 0, 0.6); border-radius: 8px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 5px 20px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <img src="https://scc10.com.br/wp-content/uploads/2024/10/one-piece-yonkou-jpg.webp" alt="Yonkou" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 180px; background-color: rgba(0, 0, 0, 0.6); border-radius: 8px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 5px 20px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <img src="https://static.bandainamcoent.eu/high/one-piece/one-piece-odyssey/03-news/OPOD_LOG_Marineford/CS060820.jpg" alt="Marineford" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 180px; background-color: rgba(0, 0, 0, 0.6); border-radius: 8px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 5px 20px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <img src="https://cdn.fstatic.com/media/movies/covers/2019/11/mqupeeot6k731_anzIUTC.jpg" alt="Wano Kuni" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Mundo de One Piece -->
+        <section id="mundo" style="background-color: rgba(2, 119, 189, 0.7); padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 3px 20px rgba(2, 119, 189, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); position: relative; overflow: hidden;">
+            <!-- Elemento decorativo de mapa estilizado como background -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: url('/placeholder.svg?height=800&width=1200'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+            
+            <!-- Elementos decorativos de ilhas -->
+            <div style="position: absolute; top: 50px; right: 80px; width: 60px; height: 60px; opacity: 0.1;">
+                <div style="font-size: 50px;">🏝️</div>
+            </div>
+            <div style="position: absolute; bottom: 70px; left: 100px; width: 60px; height: 60px; opacity: 0.1;">
+                <div style="font-size: 50px;">🏝️</div>
+            </div>
+            
+            <h2 style="color: #FFEB3B; margin-bottom: 15px; border-bottom: 2px solid #FFEB3B; padding-bottom: 10px; font-size: 2rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.7); position: relative;">O Mundo de One Piece</h2>
+            
+            <div style="position: relative; z-index: 1;">
+                <p style="margin-bottom: 15px; font-size: 1.1rem; line-height: 1.7; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">O mundo de One Piece é composto principalmente por oceanos, divididos pela Red Line (um continente que circunda o globo de norte a sul) e pela Grand Line (uma faixa oceânica que circunda o globo de leste a oeste). A Grand Line é o local mais perigoso e misterioso, onde se encontra o One Piece.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0;">
+                    <div style="background-color: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); border-left: 4px solid #FFEB3B;">
+                        <h3 style="color: #FFEB3B; font-size: 1.3rem; margin-bottom: 10px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Grand Line</h3>
+                        <p style="font-size: 1rem; line-height: 1.6; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">A Grand Line é uma faixa oceânica perigosa que divide o mundo ao meio. É aqui que a maioria das aventuras de One Piece acontece, e onde o tesouro One Piece está escondido, na ilha final chamada Laugh Tale.</p>
+                    </div>
+                    
+                    <div style="background-color: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); border-left: 4px solid #FFEB3B;">
+                        <h3 style="color: #FFEB3B; font-size: 1.3rem; margin-bottom: 10px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Novo Mundo</h3>
+                        <p style="font-size: 1rem; line-height: 1.6; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">A segunda metade da Grand Line, conhecida como Novo Mundo, é ainda mais perigosa que a primeira metade. É o território dos Yonkou (Quatro Imperadores) e onde as batalhas mais intensas acontecem.</p>
+                    </div>
+                    
+                    <div style="background-color: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); border-left: 4px solid #FFEB3B;">
+                        <h3 style="color: #FFEB3B; font-size: 1.3rem; margin-bottom: 10px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Red Line</h3>
+                        <p style="font-size: 1rem; line-height: 1.6; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">A Red Line é um enorme continente que circunda o globo de norte a sul, dividindo os oceanos. Nela está localizada Mary Geoise, a capital do Governo Mundial, onde vivem os Nobres Mundiais.</p>
+                    </div>
+                </div>
+                
+                <div style="background-color: rgba(0, 0, 0, 0.4); border-radius: 8px; padding: 20px; margin-top: 20px; border-left: 4px solid #FFEB3B;">
+                    <h3 style="color: #FFEB3B; margin-bottom: 10px; font-size: 1.3rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Governo Mundial e Piratas</h3>
+                    <p style="margin-bottom: 15px; font-size: 1.1rem; line-height: 1.7; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">O mundo é governado pelo Governo Mundial, uma organização poderosa que controla a Marinha e os Cipher Pol, grupos de inteligência e assassinato. Opondo-se ao Governo estão os piratas e o Exército Revolucionário, liderado por Monkey D. Dragon, pai de Luffy.</p>
+                    <p style="margin-bottom: 0; font-size: 1.1rem; line-height: 1.7; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">A execução do Rei dos Piratas, Gol D. Roger, deu início à Grande Era dos Piratas, quando ele revelou que deixou seu tesouro, o One Piece, em algum lugar da Grand Line. Desde então, piratas de todo o mundo navegam em busca desse tesouro lendário.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Tripulação com Cards para GIFs -->
+        <section id="tripulacao" style="background-color: rgba(2, 119, 189, 0.7); padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 3px 20px rgba(2, 119, 189, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); position: relative; overflow: hidden;">
+            <!-- Elemento decorativo dentro da seção -->
+            <div style="position: absolute; top: -20px; right: -20px; width: 120px; height: 120px; opacity: 0.1; transform: rotate(15deg);">
+                <div style="font-size: 100px;">🏴‍☠️</div>
+            </div>
+            
+            <h2 style="color: #FFEB3B; margin-bottom: 15px; border-bottom: 2px solid #FFEB3B; padding-bottom: 10px; font-size: 2rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.7); position: relative;">Tripulação do Chapéu de Palha</h2>
+            <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.7; text-shadow: 1px 1px 1px rgba(0,0,0,0.5); position: relative;">Conheça os membros da tripulação do Chapéu de Palha, cada um com suas habilidades únicas e sonhos.</p>
+            
+            <!-- Grid de cards para os membros da tripulação com GIFs -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; position: relative; z-index: 1;">
+                <!-- Card do Luffy -->
+                <div style="background-color: rgba(0, 0, 0, 0.6); border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <div style="height: 180px; overflow: hidden; position: relative;">
+                        <img src="https://media1.tenor.com/m/SbmDIfDMDpYAAAAd/luffy-heart-of-gold.gif" alt="Luffy GIF" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 15px;">
+                        <h3 style="color: #FFEB3B; font-size: 1.2rem; margin-bottom: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Monkey D. Luffy</h3>
+                        <p style="color: #fff; font-size: 0.9rem; margin-bottom: 5px; opacity: 0.9;">Capitão</p>
+                        <p style="color: #ddd; font-size: 0.8rem; line-height: 1.4;">Usuário da Gomu Gomu no Mi, com o sonho de se tornar o Rei dos Piratas.</p>
+                    </div>
+                </div>
+                
+                <!-- Card do Zoro -->
+                <div style="background-color: rgba(0, 0, 0, 0.6); border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <div style="height: 180px; overflow: hidden; position: relative;">
+                        <img src="https://media1.tenor.com/m/ewiFZDhyAsMAAAAC/zoro-one.gif" alt="Zoro GIF" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 15px;">
+                        <h3 style="color: #FFEB3B; font-size: 1.2rem; margin-bottom: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Roronoa Zoro</h3>
+                        <p style="color: #fff; font-size: 0.9rem; margin-bottom: 5px; opacity: 0.9;">Espadachim</p>
+                        <p style="color: #ddd; font-size: 0.8rem; line-height: 1.4;">Mestre do estilo de três espadas, busca se tornar o maior espadachim do mundo.</p>
+                    </div>
+                </div>
+                
+                <!-- Card da Nami -->
+                <div style="background-color: rgba(0, 0, 0, 0.6); border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <div style="height: 180px; overflow: hidden; position: relative;">
+                        <img src="https://media1.tenor.com/m/HW2DWAhLSSQAAAAC/nami-waving.gif" alt="Nami GIF" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 15px;">
+                        <h3 style="color: #FFEB3B; font-size: 1.2rem; margin-bottom: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Nami</h3>
+                        <p style="color: #fff; font-size: 0.9rem; margin-bottom: 5px; opacity: 0.9;">Navegadora</p>
+                        <p style="color: #ddd; font-size: 0.8rem; line-height: 1.4;">Cartógrafa talentosa que sonha em desenhar um mapa do mundo inteiro.</p>
+                    </div>
+                </div>
+                
+                <!-- Card do Usopp -->
+                <div style="background-color: rgba(0, 0, 0, 0.6); border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <div style="height: 180px; overflow: hidden; position: relative;">
+                        <img src="https://media1.tenor.com/m/nSANlaPyKWYAAAAC/usopp-laughing.gif" alt="Usopp GIF" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 15px;">
+                        <h3 style="color: #FFEB3B; font-size: 1.2rem; margin-bottom: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Usopp</h3>
+                        <p style="color: #fff; font-size: 0.9rem; margin-bottom: 5px; opacity: 0.9;">Atirador</p>
+                        <p style="color: #ddd; font-size: 0.8rem; line-height: 1.4;">Atirador de elite e inventor, sonha em se tornar um bravo guerreiro dos mares.</p>
+                    </div>
+                </div>
+                
+                <!-- Card do Sanji -->
+                <div style="background-color: rgba(0, 0, 0, 0.6); border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <div style="height: 180px; overflow: hidden; position: relative;">
+                        <img src="https://media1.tenor.com/m/reRVd9YCreEAAAAC/one-piece-sanji.gif" alt="Sanji GIF" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 15px;">
+                        <h3 style="color: #FFEB3B; font-size: 1.2rem; margin-bottom: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Sanji</h3>
+                        <p style="color: #fff; font-size: 0.9rem; margin-bottom: 5px; opacity: 0.9;">Cozinheiro</p>
+                        <p style="color: #ddd; font-size: 0.8rem; line-height: 1.4;">Chef talentoso e lutador especializado em chutes, busca encontrar o All Blue.</p>
+                    </div>
+                </div>
+                
+                <!-- Card do Chopper -->
+                <div style="background-color: rgba(0, 0, 0, 0.6); border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <div style="height: 180px; overflow: hidden; position: relative;">
+                        <img src="https://media1.tenor.com/m/h5VyJy3Ph_wAAAAC/chopper-one-piece-chopper.gif" alt="Chopper GIF" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 15px;">
+                        <h3 style="color: #FFEB3B; font-size: 1.2rem; margin-bottom: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Tony Tony Chopper</h3>
+                        <p style="color: #fff; font-size: 0.9rem; margin-bottom: 5px; opacity: 0.9;">Médico</p>
+                        <p style="color: #ddd; font-size: 0.8rem; line-height: 1.4;">Rena que comeu a Hito Hito no Mi, sonha em se tornar um médico capaz de curar qualquer doença.</p>
+                    </div>
+                </div>
+                
+                <!-- Card da Robin -->
+                <div style="background-color: rgba(0, 0, 0, 0.6); border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <div style="height: 180px; overflow: hidden; position: relative;">
+                        <img src="https://media1.tenor.com/m/NQAP1Z6TlZcAAAAC/anime.gif" alt="Robin GIF" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 15px;">
+                        <h3 style="color: #FFEB3B; font-size: 1.2rem; margin-bottom: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Nico Robin</h3>
+                        <p style="color: #fff; font-size: 0.9rem; margin-bottom: 5px; opacity: 0.9;">Arqueóloga</p>
+                        <p style="color: #ddd; font-size: 0.8rem; line-height: 1.4;">Usuária da Hana Hana no Mi, busca descobrir a verdadeira história do Século Perdido.</p>
+                    </div>
+                </div>
+                
+                <!-- Card do Franky -->
+                <div style="background-color: rgba(0, 0, 0, 0.6); border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <div style="height: 180px; overflow: hidden; position: relative;">
+                        <img src="https://media1.tenor.com/m/6oTc9mTpDLsAAAAC/franky-one-piece.gif" alt="Franky GIF" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 15px;">
+                        <h3 style="color: #FFEB3B; font-size: 1.2rem; margin-bottom: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Franky</h3>
+                        <p style="color: #fff; font-size: 0.9rem; margin-bottom: 5px; opacity: 0.9;">Carpinteiro</p>
+                        <p style="color: #ddd; font-size: 0.8rem; line-height: 1.4;">Ciborgue construtor de navios, criou o Thousand Sunny e sonha em construir o navio perfeito.</p>
+                    </div>
+                </div>
+                
+                <!-- Card do Brook -->
+                <div style="background-color: rgba(0, 0, 0, 0.6); border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <div style="height: 180px; overflow: hidden; position: relative;">
+                        <img src="https://media1.tenor.com/m/jSb34S79SK0AAAAC/one-piece-brook.gif" alt="Brook GIF" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 15px;">
+                        <h3 style="color: #FFEB3B; font-size: 1.2rem; margin-bottom: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Brook</h3>
+                        <p style="color: #fff; font-size: 0.9rem; margin-bottom: 5px; opacity: 0.9;">Músico</p>
+                        <p style="color: #ddd; font-size: 0.8rem; line-height: 1.4;">Esqueleto revivido pela Yomi Yomi no Mi, busca reencontrar seu amigo Laboon após 50 anos.</p>
+                    </div>
+                </div>
+                
+                <!-- Card do Jinbe -->
+                <div style="background-color: rgba(0, 0, 0, 0.6); border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 235, 59, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 3px 15px rgba(0, 0, 0, 0.5)';">
+                    <div style="height: 180px; overflow: hidden; position: relative;">
+                        <img src="https://media1.tenor.com/m/m692SlnU0ssAAAAC/jinbei-jimbei.gif" alt="Jinbe GIF" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 15px;">
+                        <h3 style="color: #FFEB3B; font-size: 1.2rem; margin-bottom: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Jinbe</h3>
+                        <p style="color: #fff; font-size: 0.9rem; margin-bottom: 5px; opacity: 0.9;">Timoneiro</p>
+                        <p style="color: #ddd; font-size: 0.8rem; line-height: 1.4;">Ex-Shichibukai e mestre do Karate Gyojin, busca a igualdade entre humanos e homens-peixe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Rodapé -->
+        <footer style="text-align: center; padding: 20px; margin-top: 30px; color: #888; font-size: 0.9rem; background-color: rgba(2, 119, 189, 0.7); border-radius: 8px; box-shadow: 0 3px 20px rgba(2, 119, 189, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); position: relative; overflow: hidden;">
+            <!-- Elemento decorativo no rodapé -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05;">
+                <svg width="100%" height="100%" viewBox="0 0 1200 100" preserveAspectRatio="none">
+                    <path d="M0,50 C150,100 350,0 500,50 C650,100 850,0 1000,50 C1150,100 1350,0 1500,50 V100 H0 Z" fill="#0277BD"></path>
+                </svg>
+            </div>
+            
+            <p style="margin-bottom: 15px; font-size: 0.9rem; position: relative;">One Piece © Eiichiro Oda / Shueisha, Toei Animation / Esta página de fãs foi criada apenas para fins informativos.</p>
+            <a href="#topo" style="display: inline-block; background-color: #D32F2F; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 10px; transition: all 0.3s; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); position: relative;" onmouseover="this.style.backgroundColor='#B71C1C';this.style.boxShadow='0 5px 15px rgba(255, 235, 59, 0.3)';" onmouseout="this.style.backgroundColor='#D32F2F';this.style.boxShadow='0 3px 10px rgba(0, 0, 0, 0.3)';">Voltar ao Topo</a>
+        </footer>
+    </div>
+</body>
+</html>
